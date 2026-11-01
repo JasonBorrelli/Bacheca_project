@@ -18,7 +18,7 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 
 ## Settimana 1 (2-8 nov): fondamenta e database
 
-- [ ] **Lun 2**: crea la repo pubblica `bacheca` con cartelle `backend/` e `frontend/`. Scrivi README iniziale e `AGENTS.md`. Aggiungi una rule e un workflow per l'agente.
+- [✔] **Lun 2**: crea la repo pubblica `bacheca` con cartelle `backend/` e `frontend/`. Scrivi README iniziale e `AGENTS.md`. Aggiungi una rule e un workflow per l'agente.
 - [ ] **Mar 3** (30 min): bozza delle funzionalità come specifica OpenSpec.
 - [ ] **Mer 4**: schema su drawSQL con `utenti`, `categorie`, `annunci` (prezzo facoltativo), `tags`, `annunci_tags`. Esporta l'immagine nella repo.
 - [ ] **Gio 5** (30 min): mockup su Stitch di due schermate: lista annunci e dettaglio.
