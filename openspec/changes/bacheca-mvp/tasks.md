@@ -2,9 +2,9 @@
 
 ## 1. Fondamenta
 
-- [ ] 1.1 Creare la repo pubblica `bacheca` con `backend/`, `frontend/`, `docs/`
-- [ ] 1.2 Scrivere `README.md` e `AGENTS.md`, aggiungere rule e workflow in `.agent/`
-- [ ] 1.3 Disegnare lo schema su drawSQL ed esportarlo in `docs/`
+- [x] 1.1 Creare la repo pubblica `bacheca` con `backend/`, `frontend/`, `docs/`
+- [x] 1.2 Scrivere `README.md` e `AGENTS.md`, aggiungere rule e workflow in `.agent/`
+- [x] 1.3 Disegnare lo schema su drawSQL ed esportarlo in `docs/`
 - [ ] 1.4 Realizzare su Stitch i mockup di lista annunci e dettaglio
 
 ## 2. Database
