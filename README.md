@@ -9,7 +9,7 @@ Marketplace di annunci tra utenti, costruito come progetto di allenamento per il
 - Elenco annunci con ricerca, filtro per categoria e ordinamento per prezzo
 - Pagina di dettaglio con categoria, venditore e tag
 - Pubblicazione di un nuovo annuncio con validazione
-- Preferiti / carrello con contatore nell'header, salvati nel browser
+- Preferiti con contatore nell'header, salvati nel browser
 - Tema chiaro e scuro
 - Generazione della descrizione di un annuncio con l'API Gemini
 - Layout responsive, pensato prima per mobile
@@ -92,21 +92,21 @@ pnpm dev                 # http://localhost:5173
 
 Tutte le rotte hanno il prefisso `/api`.
 
-| Metodo | Rotta          | Descrizione                      | Stato   |
-| ------ | -------------- | -------------------------------- | ------- |
-| GET    | `/annunci`     | Elenco annunci con categoria     | da fare |
-| GET    | `/annunci/:id` | Dettaglio con tag                | da fare |
-| POST   | `/annunci`     | Crea un annuncio (201)           | da fare |
-| PUT    | `/annunci/:id` | Aggiorna un annuncio             | da fare |
-| DELETE | `/annunci/:id` | Elimina un annuncio (204)        | da fare |
-| GET    | `/categorie`   | Elenco categorie                 | da fare |
-| POST   | `/descrizione` | Genera la descrizione con Gemini | da fare |
+| Metodo | Rotta          | Descrizione                                      | Stato   |
+| ------ | -------------- | ------------------------------------------------ | ------- |
+| GET    | `/annunci`     | Elenco annunci con categoria                     | da fare |
+| GET    | `/annunci/:id` | Dettaglio con tag                                | da fare |
+| POST   | `/annunci`     | Crea un annuncio e, se nuovo, il venditore (201) | da fare |
+| PUT    | `/annunci/:id` | Aggiorna un annuncio                             | da fare |
+| DELETE | `/annunci/:id` | Elimina un annuncio (204)                        | da fare |
+| GET    | `/categorie`   | Elenco categorie                                 | da fare |
+| POST   | `/descrizione` | Genera la descrizione con Gemini                 | da fare |
 
 Gli errori sono sempre in JSON: `{ "error": "messaggio" }`.
 
 ## Database
 
-Tabelle: `utenti`, `categorie`, `annunci`, `tags`, `annunci_tags` (relazione molti a molti) e `preferiti`. Lo schema è in `docs/`.
+Tabelle: `utenti`, `categorie`, `annunci`, `tags` e `annunci_tags` (relazione molti a molti). Il prezzo di un annuncio è facoltativo (`NULL` = da concordare). I preferiti sono salvati nel browser, non nel database. Lo schema è in `docs/`.
 
 ## Argomenti del corso messi in pratica
 

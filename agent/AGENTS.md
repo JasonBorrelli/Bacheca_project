@@ -49,11 +49,13 @@ cd frontend && pnpm install && pnpm dev    # http://localhost:5173
 
 ## Database
 
-Tabelle previste: `utenti`, `categorie`, `annunci`, `tags`, `annunci_tags`, `preferiti`.
+Tabelle previste: `utenti`, `categorie`, `annunci`, `tags`, `annunci_tags`.
 
 - `annunci` → `categorie` (molti a uno) e `annunci` → `utenti` (molti a uno)
 - `annunci` ↔ `tags` (molti a molti, tramite `annunci_tags`)
-- `preferiti` collega `utenti` e `annunci`
+- Il prezzo di un annuncio può essere `NULL` ("da concordare"). Per ordinare mettendo i `NULL` in fondo: `ORDER BY prezzo IS NULL, prezzo`
+- Alla pubblicazione il venditore si identifica con l'email: se esiste in `utenti` si usa quell'utente, altrimenti lo si crea
+- I preferiti **non** sono nel database: stanno nel browser (Context + localStorage)
 - Le query SELECT, GROUP BY e JOIN di riferimento stanno in `backend/sql/`.
 
 ## Regole per l'agente

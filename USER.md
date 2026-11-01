@@ -20,7 +20,7 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 
 - [ ] **Lun 2**: crea la repo pubblica `bacheca` con cartelle `backend/` e `frontend/`. Scrivi README iniziale e `AGENTS.md`. Aggiungi una rule e un workflow per l'agente.
 - [ ] **Mar 3** (30 min): bozza delle funzionalità come specifica OpenSpec.
-- [ ] **Mer 4**: schema su drawSQL con `utenti`, `categorie`, `annunci`, `tags`, `annunci_tags`, `preferiti`. Esporta l'immagine nella repo.
+- [ ] **Mer 4**: schema su drawSQL con `utenti`, `categorie`, `annunci` (prezzo facoltativo), `tags`, `annunci_tags`. Esporta l'immagine nella repo.
 - [ ] **Gio 5** (30 min): mockup su Stitch di due schermate: lista annunci e dettaglio.
 - [ ] **Ven 6**: crea il DB in DBeaver con le tabelle e i dati di prova (almeno 15 annunci, 5 categorie, 8 tag).
 - [ ] **Sab 7**: scrivi le query SELECT/NULL, GROUP BY e JOIN in file `.sql`. Commit e push.
@@ -32,7 +32,7 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 - [ ] **Mar 10** (30 min): middleware per gli errori 500 e per il 404.
 - [ ] **Mer 11**: router `annunci` con INDEX (JOIN con la categoria) e SHOW (con i tag).
 - [ ] **Gio 12** (30 min): router `categorie`, con la sola INDEX.
-- [ ] **Ven 13**: STORE e UPDATE, con validazione dei dati in ingresso.
+- [ ] **Ven 13**: STORE e UPDATE, con validazione dei dati in ingresso. Nello STORE cerca il venditore per email e crealo se non esiste.
 - [ ] **Sab 14**: DESTROY (risposta 204), test completo su Postman, verifica su DBeaver ed export della collection nella repo.
 - [ ] **Dom 15**: riposo.
 
