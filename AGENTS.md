@@ -19,7 +19,9 @@ Istruzioni per gli agenti AI che lavorano su questo repository.
 ```
 backend/    server Express: app.js, routers/, middlewares/, db/, sql/, public/
 frontend/   app React: src/components, src/pages, src/context, src/hooks
-docs/       schema del database, specifiche OpenSpec, mockup
+docs/       immagine dello schema e mockup
+agent/      regole e workflow per l'agente
+openspec/   proposta, specifiche e task del progetto
 ```
 
 ## Comandi
@@ -31,6 +33,12 @@ cd backend && pnpm install && pnpm dev     # http://localhost:3000
 # frontend
 cd frontend && pnpm install && pnpm dev    # http://localhost:5173
 ```
+
+## Regole e workflow
+
+- `agent/rules/bacheca.md`: metodo di lavoro (prima il piano, un passo alla volta).
+- `agent/rules/workflows/nuova-rotta.md`: procedura per aggiungere una rotta REST.
+- `agent/rules/workflows/chiudi-giornata.md`: controlli, spunta in `USER.md` e commit di fine giornata.
 
 ## Convenzioni di codice
 

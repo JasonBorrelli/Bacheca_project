@@ -31,14 +31,16 @@ bacheca/
 ├── README.md
 ├── AGENTS.md
 ├── USER.md
-├── docs/               schema del database, specifiche, mockup
+├── agent/              regole e workflow per l'agente
+├── openspec/           proposta, specifiche e task
+├── docs/               immagine dello schema e mockup
 ├── backend/
 │   ├── app.js
 │   ├── .env.example
 │   ├── db/             connessione a MySQL
 │   ├── routers/        annunci.js, categorie.js
 │   ├── middlewares/    gestione errori e 404
-│   ├── sql/            schema e query (SELECT, GROUP BY, JOIN)
+│   ├── sql/            schema, dati di prova e query
 │   └── public/         file statici
 └── frontend/
     └── src/
@@ -47,6 +49,8 @@ bacheca/
         ├── context/
         └── hooks/
 ```
+
+Le cartelle `backend/` e `frontend/` sono già presenti; i file elencati verranno aggiunti nelle tappe successive.
 
 ## Come avviare il progetto
 
@@ -106,7 +110,7 @@ Gli errori sono sempre in JSON: `{ "error": "messaggio" }`.
 
 ## Database
 
-Tabelle: `utenti`, `categorie`, `annunci`, `tags` e `annunci_tags` (relazione molti a molti). Il prezzo di un annuncio è facoltativo (`NULL` = da concordare). I preferiti sono salvati nel browser, non nel database. Lo schema è in `docs/`.
+Tabelle: `utenti`, `categorie`, `annunci`, `tags` e `annunci_tags` (relazione molti a molti). Il prezzo di un annuncio è facoltativo (`NULL` = da concordare). I preferiti sono salvati nel browser, non nel database. Lo schema SQL è in `backend/sql/` (con i dati di prova), l'immagine in `docs/`.
 
 ## Argomenti del corso messi in pratica
 

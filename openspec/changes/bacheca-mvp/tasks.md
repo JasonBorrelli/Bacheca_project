@@ -3,14 +3,14 @@
 ## 1. Fondamenta
 
 - [x] 1.1 Creare la repo pubblica `bacheca` con `backend/`, `frontend/`, `docs/`
-- [x] 1.2 Scrivere `README.md` e `AGENTS.md`, aggiungere rule e workflow in `.agent/`
+- [x] 1.2 Scrivere `README.md` e `AGENTS.md`, aggiungere rule e workflow in `agent/`
 - [x] 1.3 Disegnare lo schema su drawSQL ed esportarlo in `docs/`
 - [ ] 1.4 Realizzare su Stitch i mockup di lista annunci e dettaglio
 
 ## 2. Database
 
-- [ ] 2.1 Creare le tabelle `utenti`, `categorie`, `annunci` (prezzo facoltativo), `tags`, `annunci_tags`
-- [ ] 2.2 Inserire dati di prova (almeno 15 annunci, 5 categorie, 8 tag)
+- [x] 2.1 Creare le tabelle `utenti`, `categorie`, `annunci` (prezzo facoltativo), `tags`, `annunci_tags`
+- [x] 2.2 Inserire dati di prova (almeno 15 annunci, 5 categorie, 8 tag)
 - [ ] 2.3 Scrivere in `backend/sql/` le query SELECT/NULL, GROUP BY e JOIN
 
 ## 3. Backend Express
