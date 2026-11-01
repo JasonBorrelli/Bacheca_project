@@ -22,6 +22,7 @@ frontend/   app React: src/components, src/pages, src/context, src/hooks
 docs/       immagine dello schema e mockup
 agent/      regole e workflow per l'agente
 openspec/   proposta, specifiche e task del progetto
+DESIGN.md   design system, token Tailwind e mockup Stitch
 ```
 
 ## Comandi
@@ -39,6 +40,7 @@ cd frontend && pnpm install && pnpm dev    # http://localhost:5173
 - `agent/rules/bacheca.md`: metodo di lavoro (prima il piano, un passo alla volta).
 - `agent/rules/workflows/nuova-rotta.md`: procedura per aggiungere una rotta REST.
 - `agent/rules/workflows/chiudi-giornata.md`: controlli, spunta in `USER.md` e commit di fine giornata.
+- `DESIGN.md`: token di stile da Stitch e configurazione Tailwind (colori, tipografia, componenti).
 
 ## Convenzioni di codice
 
