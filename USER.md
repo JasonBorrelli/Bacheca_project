@@ -21,9 +21,9 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 - [x] **Lun 2**: crea la repo pubblica `bacheca` con cartelle `backend/` e `frontend/`. Scrivi README iniziale e `AGENTS.md`. Aggiungi una rule e un workflow per l'agente.
 - [x] **Mar 3** (30 min): bozza delle funzionalità come specifica OpenSpec.
 - [x] **Mer 4**: schema su drawSQL con `utenti`, `categorie`, `annunci` (prezzo facoltativo), `tags`, `annunci_tags`. Esporta l'immagine nella repo.
-- [ ] **Gio 5** (30 min): mockup su Stitch di due schermate: lista annunci e dettaglio.
+- [x] **Gio 5** (30 min): mockup su Stitch di due schermate: lista annunci e dettaglio.
 - [x] **Ven 6**: crea il DB in DBeaver con le tabelle e i dati di prova (almeno 15 annunci, 5 categorie, 8 tag).
-- [ ] **Sab 7**: scrivi le query SELECT/NULL, GROUP BY e JOIN in file `.sql`. Commit e push.
+- [x] **Sab 7**: scrivi le query SELECT/NULL, GROUP BY e JOIN in file `.sql`. Commit e push.
 - [ ] **Dom 8**: riposo.
 
 ## Settimana 2 (9-15 nov): backend Express

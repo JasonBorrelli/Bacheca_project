@@ -118,8 +118,8 @@ Git/GitHub · HTML/CSS (box model, flexbox, grid, responsive) · JavaScript (arr
 
 ## Avanzamento
 
-- [ ] Fondamenta: repo, README, AGENTS.md, schema, mockup
-- [ ] Database con dati di prova e query
+- [x] Fondamenta: repo, README, AGENTS.md, schema, mockup
+- [x] Database con dati di prova e query
 - [ ] Backend Express con CRUD e middleware
 - [ ] Frontend base con Router e layout responsive
 - [ ] Collegamento frontend e backend

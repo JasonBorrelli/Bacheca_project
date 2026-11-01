@@ -44,7 +44,7 @@ cd frontend && pnpm install && pnpm dev    # http://localhost:5173
 
 ## Convenzioni di codice
 
-- **Nomi del dominio in italiano** (`annunci`, `categorie`, `AnnuncioCard`, `useCarrello`), parti tecniche in inglese (`Router`, `Provider`, `handleSubmit`).
+- **Nomi del dominio in italiano** (`annunci`, `categorie`, `AnnuncioCard`, `usePreferiti`), parti tecniche in inglese (`Router`, `Provider`, `handleSubmit`).
 - Componenti React in PascalCase, un componente per file. Funzioni e variabili in camelCase.
 - Funzioni a freccia e componenti funzionali con hook. Niente class component.
 - Stile solo con classi Tailwind. Approccio **mobile-first**: si parte da 512px e si aggiungono i breakpoint 576 / 768 / 992 px.
