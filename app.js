@@ -1,7 +1,7 @@
 import express from 'express';
 import errorServer from './backend/middleware/errorServer.js';
 import notFound from './backend/middleware/notFound.js';
-import annunciRouter from './backend/routers/annunci.js';
+import annunciRouter from './backend/routers/api/annunci.js';
 
 
 const app = express();
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.json({ messaggio: 'API di Bacheca' });
 });
 
-app.use('/annunci', annunciRouter);
+app.use('/api/annunci', annunciRouter);
 
 
 // Middleware per rotte non trovate (404) e gestione errori (500)

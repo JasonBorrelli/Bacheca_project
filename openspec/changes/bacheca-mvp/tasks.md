@@ -15,8 +15,8 @@
 
 ## 3. Backend Express
 
-- [ ] 3.1 Impostare `app.js`, cartella `public`, `.env` e `db/connection.js`
-- [ ] 3.2 Aggiungere i middleware per il 404 e per gli errori 500
+- [x] 3.1 Impostare `app.js`, cartella `public`, `.env` e `db/connection.js`
+- [x] 3.2 Aggiungere i middleware per il 404 e per gli errori 500
 - [ ] 3.3 Rotte `GET /api/annunci` (con categoria) e `GET /api/annunci/:id` (con tag)
 - [ ] 3.4 Rotta `GET /api/categorie`
 - [ ] 3.5 Rotte `POST` e `PUT` degli annunci con validazione; nel `POST` cercare il venditore per email e crearlo se manca
