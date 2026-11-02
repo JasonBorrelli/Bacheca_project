@@ -28,8 +28,8 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 
 ## Settimana 2 (9-15 nov): backend Express
 
-- [ ] **Lun 9**: setup di Express con `app.js`, cartella `public`, `mysql2` e `db/connection.js`. Testa la rotta `/` su Postman.
-- [ ] **Mar 10** (30 min): middleware per gli errori 500 e per il 404.
+- [x] **Lun 9**: setup di Express con `app.js`, cartella `public`, `mysql2` e `db/connection.js`. Testa la rotta `/` su Postman.
+- [x] **Mar 10** (30 min): middleware per gli errori 500 e per il 404.
 - [ ] **Mer 11**: router `annunci` con INDEX (JOIN con la categoria) e SHOW (con i tag).
 - [ ] **Gio 12** (30 min): router `categorie`, con la sola INDEX.
 - [ ] **Ven 13**: STORE e UPDATE, con validazione dei dati in ingresso. Nello STORE cerca il venditore per email e crealo se non esiste.
