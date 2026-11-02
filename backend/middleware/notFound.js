@@ -1,8 +1,6 @@
-export default function notFound(err, req, res, next) {
-    res.status(400);
-    res.json({
-        status: 400,
-        err: err?.message,
+export default function notFound(req, res, next) {
+    res.status(404).json({
+        status: 404,
         message: 'Page not found!'
     });
 }
