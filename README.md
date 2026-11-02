@@ -1,131 +1,16 @@
-# Bacheca
+# React + Vite
 
-Marketplace di annunci tra utenti, costruito come progetto di allenamento per il corso **AI Web Developer**. Gli utenti consultano gli annunci, li filtrano per categoria e tag, salvano i preferiti e ne pubblicano di nuovi. Un assistente basato su Gemini genera la descrizione di un annuncio a partire da poche parole chiave.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> Stato del progetto: **in sviluppo**. Il programma giornaliero è in [`USER.md`](USER.md).
+Currently, two official plugins are available:
 
-## Funzionalità
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- Elenco annunci con ricerca, filtro per categoria e ordinamento per prezzo
-- Pagina di dettaglio con categoria, venditore e tag
-- Pubblicazione di un nuovo annuncio con validazione
-- Preferiti con contatore nell'header, salvati nel browser
-- Tema chiaro e scuro
-- Generazione della descrizione di un annuncio con l'API Gemini
-- Layout responsive, pensato prima per mobile
+## React Compiler
 
-## Stack
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-| Parte     | Tecnologie                                           |
-| --------- | ---------------------------------------------------- |
-| Frontend  | React, Vite, Tailwind CSS, React Router, Context API |
-| Backend   | Node.js, Express 5, mysql2                           |
-| Database  | MySQL 8.4                                            |
-| AI        | API Gemini (chiamata dal backend)                    |
-| Strumenti | pnpm, Git/GitHub, Postman, DBeaver                   |
+## Expanding the ESLint configuration
 
-## Struttura del repository
-
-```
-bacheca/
-├── README.md
-├── AGENTS.md
-├── USER.md
-├── agent/              regole e workflow per l'agente
-├── openspec/           proposta, specifiche e task
-├── docs/               immagine dello schema e mockup
-├── backend/
-│   ├── app.js
-│   ├── .env.example
-│   ├── db/             connessione a MySQL
-│   ├── routers/        annunci.js, categorie.js
-│   ├── middlewares/    gestione errori e 404
-│   ├── sql/            schema, dati di prova e query
-│   └── public/         file statici
-└── frontend/
-    └── src/
-        ├── components/
-        ├── pages/
-        ├── context/
-        └── hooks/
-```
-
-Le cartelle `backend/` e `frontend/` sono già presenti; i file elencati verranno aggiunti nelle tappe successive.
-
-## Come avviare il progetto
-
-### Prerequisiti
-
-- Node.js e pnpm
-- MySQL 8.4 in esecuzione e un client come DBeaver
-
-### 1. Database
-
-Crea un database (per esempio `bacheca`) e importa lo schema da `backend/sql/`.
-
-### 2. Backend
-
-```bash
-cd backend
-pnpm install
-cp .env.example .env     # poi compila i valori
-pnpm dev                 # http://localhost:3000
-```
-
-Variabili in `backend/.env`:
-
-```
-PORT=3000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=bacheca
-FRONTEND_URL=http://localhost:5173
-GEMINI_API_KEY=
-```
-
-### 3. Frontend
-
-```bash
-cd frontend
-pnpm install
-pnpm dev                 # http://localhost:5173
-```
-
-## API
-
-Tutte le rotte hanno il prefisso `/api`.
-
-| Metodo | Rotta          | Descrizione                                      | Stato   |
-| ------ | -------------- | ------------------------------------------------ | ------- |
-| GET    | `/annunci`     | Elenco annunci con categoria                     | da fare |
-| GET    | `/annunci/:id` | Dettaglio con tag                                | da fare |
-| POST   | `/annunci`     | Crea un annuncio e, se nuovo, il venditore (201) | da fare |
-| PUT    | `/annunci/:id` | Aggiorna un annuncio                             | da fare |
-| DELETE | `/annunci/:id` | Elimina un annuncio (204)                        | da fare |
-| GET    | `/categorie`   | Elenco categorie                                 | da fare |
-| POST   | `/descrizione` | Genera la descrizione con Gemini                 | da fare |
-
-Gli errori sono sempre in JSON: `{ "error": "messaggio" }`.
-
-## Database
-
-Tabelle: `utenti`, `categorie`, `annunci`, `tags` e `annunci_tags` (relazione molti a molti). Il prezzo di un annuncio è facoltativo (`NULL` = da concordare). I preferiti sono salvati nel browser, non nel database. Lo schema SQL è in `backend/sql/` (con i dati di prova), l'immagine in `docs/`.
-
-## Argomenti del corso messi in pratica
-
-Git/GitHub · HTML/CSS (box model, flexbox, grid, responsive) · JavaScript (array, oggetti, fetch, localStorage, timing functions) · React (componenti, hook, form, Router, Context) · SQL (relazioni, GROUP BY, JOIN) · Express (routing, middleware, mysql2) · API Gemini · AGENTS.md e sviluppo con agenti AI.
-
-## Avanzamento
-
-- [x] Fondamenta: repo, README, AGENTS.md, schema, mockup
-- [x] Database con dati di prova e query
-- [ ] Backend Express con CRUD e middleware
-- [ ] Frontend base con Router e layout responsive
-- [ ] Collegamento frontend e backend
-- [ ] Filtri, form, Context e localStorage
-- [ ] Integrazione Gemini e rifiniture
-
-## Screenshot
-
-_Da aggiungere a fine progetto._
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
