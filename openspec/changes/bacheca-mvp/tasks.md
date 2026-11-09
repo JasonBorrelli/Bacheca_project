@@ -28,8 +28,8 @@
 - [x] 4.1 Creare il progetto con Vite e pnpm, installare Tailwind e React Router
 - [x] 4.2 Layout con `Outlet`, header con `NavLink` e footer
 - [x] 4.3 Pagina 404 e pagine vuote (home, annunci, dettaglio, pubblica, preferiti)
-- [ ] 4.4 Componenti `AnnuncioCard` e `ListaAnnunci` con dati finti
-- [ ] 4.5 Griglia responsive a 1, 2 e 3-4 colonne
+- [x] 4.4 Componenti `AnnuncioCard` e `ListaAnnunci` con dati finti
+- [x] 4.5 Griglia responsive a 1, 2 e 3-4 colonne
 
 ## 5. Collegamento
 

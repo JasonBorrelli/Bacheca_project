@@ -40,7 +40,7 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 
 - [x] **Lun 16**: Vite con pnpm, Tailwind, reset CSS, font e icone. React Router con `Outlet` e pagine vuote.
 - [x] **Mar 17** (30 min): pagina 404 e `NavLink` con classe active.
-- [ ] **Mer 18**: `AnnuncioCard` e `ListaAnnunci` con dati finti, griglia responsive mobile-first.
+- [x] **Mer 18**: `AnnuncioCard` e `ListaAnnunci` con dati finti, griglia responsive mobile-first.
 - [ ] **Gio 19** (30 min): rifinitura di Header e Footer seguendo il mockup di Stitch.
 - [ ] **Ven 20**: sostituisci i dati finti con `fetch` e `useEffect`, con loader, errori con try/catch e gestione CORS.
 - [ ] **Sab 21**: pagina di dettaglio `/annunci/:id` con `useParams`. Redirect all'elenco se l'annuncio non esiste.
