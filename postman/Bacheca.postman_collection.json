@@ -1,0 +1,179 @@
+{
+  "info": {
+    "name": "Bacheca API",
+    "_postman_id": "b6f1c3a2-5e4d-4f8a-9c1b-7a2d3e4f5a6b",
+    "description": "Collection delle rotte REST di Bacheca. Avvia il backend con `pnpm watch` e verifica che `baseUrl` punti a http://localhost:3000.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "annuncioId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Generale",
+      "item": [
+        {
+          "name": "Radice API",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": ["{{baseUrl}}"],
+              "path": [""]
+            },
+            "description": "Risponde con un messaggio JSON per verificare che il server sia attivo."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Annunci",
+      "item": [
+        {
+          "name": "Index annunci",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/annunci",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "annunci"]
+            },
+            "description": "Elenca gli annunci con categoria e venditore."
+          },
+          "response": []
+        },
+        {
+          "name": "Show annuncio",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/annunci/{{annuncioId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "annunci", "{{annuncioId}}"]
+            },
+            "description": "Dettaglio dell'annuncio con id {{annuncioId}}, tag inclusi. Se non esiste risponde 404."
+          },
+          "response": []
+        },
+        {
+          "name": "Store annuncio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titolo\": \"Bici da corsa\",\n  \"descrizione\": \"Bicicletta usata pochissimo, sempre tenuta in garage e revisionata di recente. Vendo per cambio progetto.\",\n  \"prezzo\": 150,\n  \"immagine\": \"https://picsum.photos/seed/bici/600/400\",\n  \"categoria_id\": 4,\n  \"nome_venditore\": \"Mario Verdi\",\n  \"email_venditore\": \"mario.verdi@example.com\",\n  \"tags\": [1, 7]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/annunci",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "annunci"]
+            },
+            "description": "Crea un annuncio. Il venditore viene cercato per email e creato se non esiste. Risponde 201 e salva l'id in `annuncioId` per le richieste successive."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "const annuncio = pm.response.json();",
+                  "if (annuncio.id) {",
+                  "    pm.collectionVariables.set('annuncioId', annuncio.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "Update annuncio",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titolo\": \"Bici da corsa aggiornata\",\n  \"descrizione\": \"Bicicletta usata pochissimo, sempre tenuta in garage e revisionata di recente. Vendo per cambio progetto e passo a una e-bike.\",\n  \"prezzo\": 130,\n  \"immagine\": \"https://picsum.photos/seed/bici/600/400\",\n  \"categoria_id\": 4,\n  \"tags\": [1, 7]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/annunci/{{annuncioId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "annunci", "{{annuncioId}}"]
+            },
+            "description": "Aggiorna l'annuncio {{annuncioId}}. Non modifica il venditore. Se i `tags` non vengono inviati restano invariati; con [] si svuotano."
+          },
+          "response": []
+        },
+        {
+          "name": "Destroy annuncio",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/annunci/{{annuncioId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "annunci", "{{annuncioId}}"]
+            },
+            "description": "Elimina l'annuncio {{annuncioId}} e risponde 204 senza corpo. Attenzione: cancella davvero il record."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categorie",
+      "item": [
+        {
+          "name": "Index categorie",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorie",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "categorie"]
+            },
+            "description": "Elenca le categorie ordinate per nome."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

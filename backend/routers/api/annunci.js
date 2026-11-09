@@ -283,4 +283,21 @@ router.put('/:id', async (req, res, next) => {
     }
 });
 
+router.delete('/:id', async (req, res, next) => {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id) || id <= 0) {
+        return res.status(400).json({ error: 'ID non valido' });
+    }
+
+    try {
+        const [risultato] = await db.query('DELETE FROM annunci WHERE id = ?', [id]);
+        if (risultato.affectedRows === 0) {
+            return res.status(404).json({ error: 'Annuncio non trovato' });
+        }
+        res.status(204).end();
+    } catch (err) {
+        next(err);
+    }
+});
+
 export default router;

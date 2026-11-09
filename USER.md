@@ -24,22 +24,22 @@ Spunta ogni giornata con `[x]` quando l'hai completata.
 - [x] **Gio 5** (30 min): mockup su Stitch di due schermate: lista annunci e dettaglio.
 - [x] **Ven 6**: crea il DB in DBeaver con le tabelle e i dati di prova (almeno 15 annunci, 5 categorie, 8 tag).
 - [x] **Sab 7**: scrivi le query SELECT/NULL, GROUP BY e JOIN in file `.sql`. Commit e push.
-- [ ] **Dom 8**: riposo.
+- [x] **Dom 8**: riposo.
 
 ## Settimana 2 (9-15 nov): backend Express
 
 - [x] **Lun 9**: setup di Express con `app.js`, cartella `public`, `mysql2` e `db/connection.js`. Testa la rotta `/` su Postman.
 - [x] **Mar 10** (30 min): middleware per gli errori 500 e per il 404.
 - [x] **Mer 11**: router `annunci` con INDEX (JOIN con la categoria) e SHOW (con i tag).
-- [ ] **Gio 12** (30 min): router `categorie`, con la sola INDEX.
-- [ ] **Ven 13**: STORE e UPDATE, con validazione dei dati in ingresso. Nello STORE cerca il venditore per email e crealo se non esiste.
-- [ ] **Sab 14**: DESTROY (risposta 204), test completo su Postman, verifica su DBeaver ed export della collection nella repo.
+- [x] **Gio 12** (30 min): router `categorie`, con la sola INDEX.
+- [x] **Ven 13**: STORE e UPDATE, con validazione dei dati in ingresso. Nello STORE cerca il venditore per email e crealo se non esiste.
+- [x] **Sab 14**: DESTROY (risposta 204), test completo su Postman, verifica su DBeaver ed export della collection nella repo.
 - [ ] **Dom 15**: riposo.
 
 ## Settimana 3 (16-22 nov): frontend e collegamento
 
-- [ ] **Lun 16**: Vite con pnpm, Tailwind, reset CSS, font e icone. React Router con `Outlet` e pagine vuote.
-- [ ] **Mar 17** (30 min): pagina 404 e `NavLink` con classe active.
+- [x] **Lun 16**: Vite con pnpm, Tailwind, reset CSS, font e icone. React Router con `Outlet` e pagine vuote.
+- [x] **Mar 17** (30 min): pagina 404 e `NavLink` con classe active.
 - [ ] **Mer 18**: `AnnuncioCard` e `ListaAnnunci` con dati finti, griglia responsive mobile-first.
 - [ ] **Gio 19** (30 min): rifinitura di Header e Footer seguendo il mockup di Stitch.
 - [ ] **Ven 20**: sostituisci i dati finti con `fetch` e `useEffect`, con loader, errori con try/catch e gestione CORS.

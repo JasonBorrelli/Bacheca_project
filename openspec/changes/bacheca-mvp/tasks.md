@@ -18,16 +18,16 @@
 - [x] 3.1 Impostare `app.js`, cartella `public`, `.env` e `db/connection.js`
 - [x] 3.2 Aggiungere i middleware per il 404 e per gli errori 500
 - [x] 3.3 Rotte `GET /api/annunci` (con categoria) e `GET /api/annunci/:id` (con tag)
-- [ ] 3.4 Rotta `GET /api/categorie`
-- [ ] 3.5 Rotte `POST` e `PUT` degli annunci con validazione; nel `POST` cercare il venditore per email e crearlo se manca
-- [ ] 3.6 Rotta `DELETE` con risposta 204
-- [ ] 3.7 Testare tutte le rotte su Postman e verificare i dati su DBeaver
+- [x] 3.4 Rotta `GET /api/categorie`
+- [x] 3.5 Rotte `POST` e `PUT` degli annunci con validazione; nel `POST` cercare il venditore per email e crearlo se manca
+- [x] 3.6 Rotta `DELETE` con risposta 204
+- [x] 3.7 Testare tutte le rotte su Postman e verificare i dati su DBeaver
 
 ## 4. Frontend base
 
-- [ ] 4.1 Creare il progetto con Vite e pnpm, installare Tailwind e React Router
-- [ ] 4.2 Layout con `Outlet`, header con `NavLink` e footer
-- [ ] 4.3 Pagina 404 e pagine vuote (home, annunci, dettaglio, pubblica, preferiti)
+- [x] 4.1 Creare il progetto con Vite e pnpm, installare Tailwind e React Router
+- [x] 4.2 Layout con `Outlet`, header con `NavLink` e footer
+- [x] 4.3 Pagina 404 e pagine vuote (home, annunci, dettaglio, pubblica, preferiti)
 - [ ] 4.4 Componenti `AnnuncioCard` e `ListaAnnunci` con dati finti
 - [ ] 4.5 Griglia responsive a 1, 2 e 3-4 colonne
 

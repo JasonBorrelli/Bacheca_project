@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-canvas: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-light: #DBE1FF;
+  --color-ai-indigo: #6366F1;
+  --color-ai-violet: #8B5CF6;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  --color-border-subtle: #E2E8F0;
+  --color-price-drop: #EF4444;
+  --color-badge-success: #10B981;
+
+  --radius-card: 1rem;
+  --radius-input: 0.75rem;
+
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-floating: 0 10px 25px -5px rgba(37, 99, 235, 0.2), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  --shadow-ai-focus: 0 0 0 1px rgba(99, 102, 241, 0.3), 0 4px 20px rgba(139, 92, 246, 0.12);
+
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 62rem;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
