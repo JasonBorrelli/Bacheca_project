@@ -2,6 +2,7 @@ import express from 'express';
 import errorServer from './backend/middleware/errorServer.js';
 import notFound from './backend/middleware/notFound.js';
 import annunciRouter from './backend/routers/api/annunci.js';
+import categorieRouter from './backend/routers/api/categorie.js';
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/annunci', annunciRouter);
+app.use('/api/categorie', categorieRouter);
 
 
 // Middleware per rotte non trovate (404) e gestione errori (500)
